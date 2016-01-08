@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/left_button"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/fenlei"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                    android:src="@drawable/find"
+                   android:padding="8dp"
+                   android:onClick="findSearch"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+
+    <!--<com.xiaogang.myapp.util.upload.ReboundScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content">-->
+        <!--<RelativeLayout android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content">-->
+                <!--<LinearLayout android:layout_width="match_parent"-->
+                              <!--android:orientation="horizontal"-->
+                              <!--android:padding="15dp"-->
+                              <!--android:id="@+id/one"-->
+                              <!--android:layout_height="wrap_content">-->
+                    <!--<ImageView android:layout_width="wrap_content"-->
+                               <!--android:src="@drawable/type_one"-->
+                               <!--android:layout_height="wrap_content"/>-->
+                    <!--<TextView android:layout_width="wrap_content"-->
+                              <!--android:text="@string/tongxun"-->
+                              <!--android:textSize="18sp"-->
+                              <!--android:textColor="@color/text_color_heise_504f4f"-->
+                              <!--android:layout_marginLeft="10dp"-->
+                              <!--android:layout_height="wrap_content"/>-->
+                <!--</LinearLayout>-->
+                <!--<View android:layout_width="match_parent"-->
+                      <!--android:background="@color/gray"-->
+                      <!--android:layout_marginLeft="10dp"-->
+                      <!--android:layout_marginRight="10dp"-->
+                      <!--android:layout_below="@+id/one"-->
+                      <!--android:id="@+id/one_line"-->
+                      <!--android:layout_height="1.0dp"/>-->
+           <!-- -->
+        <!--</RelativeLayout>-->
+    <!--</com.xiaogang.myapp.util.upload.ReboundScrollView>-->
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            >
+        <ScrollView
+                android:id="@+id/tools_scrlllview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:layout_weight="3"
+                >
+
+            <LinearLayout
+                    android:id="@+id/tools"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    />
+
+        </ScrollView>
+
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/goods_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

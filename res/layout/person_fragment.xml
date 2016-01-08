@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+                  android:padding="15dp"
+                  android:focusable="true"
+                  android:focusableInTouchMode="true"
+                  android:background="@color/gray_one"
+                  android:layout_height="wrap_content">
+
+            <EditText android:layout_width="match_parent"
+                    android:hint="@string/souhaoyou"
+                      android:textSize="14sp"
+                      android:padding="15dp"
+                      android:background="@drawable/et_bule_bg"
+                      android:drawableRight="@drawable/sou"
+                      android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ExpandableListView android:layout_width="match_parent"
+              android:id="@+id/buddy_expandablelistview"
+              android:divider="@color/divider_color"
+              android:dividerHeight="1px"
+              android:childDivider="@color/divider_color"
+              android:layout_height="wrap_content">
+    </ExpandableListView>
+</LinearLayout>

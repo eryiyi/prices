@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/resetpwr"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/find"
+                   android:visibility="gone"
+                   android:layout_marginRight="10dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <com.xiaogang.myapp.util.upload.ReboundScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:padding="8dp"
+                      android:layout_height="wrap_content">
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:minHeight="50dp"
+                      android:textSize="14sp"
+                      android:layout_marginLeft="3dp"
+                      android:layout_marginRight="3dp"
+                      android:layout_marginTop="15dp"
+                      android:paddingTop="10dp"
+                      android:paddingLeft="5dp"
+                      android:paddingRight="5dp"
+                      android:id="@+id/pwr_one"
+                      android:padding="15dp"
+                      android:password="true"
+                      android:background="@drawable/et_bule_bg"
+                      android:hint="旧密码"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:minHeight="50dp"
+                      android:textSize="14sp"
+                      android:layout_marginLeft="3dp"
+                      android:layout_marginRight="3dp"
+                      android:layout_marginTop="5dp"
+                      android:paddingTop="10dp"
+                      android:paddingLeft="5dp"
+                      android:paddingRight="5dp"
+                      android:padding="15dp"
+                      android:id="@+id/pwr_two"
+                      android:password="true"
+                      android:background="@drawable/et_bule_bg"
+                      android:hint="新密码"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:minHeight="50dp"
+                      android:textSize="14sp"
+                      android:layout_marginLeft="3dp"
+                      android:layout_marginRight="3dp"
+                      android:layout_marginTop="5dp"
+                      android:paddingTop="10dp"
+                      android:id="@+id/pwr_three"
+                      android:paddingLeft="5dp"
+                      android:paddingRight="5dp"
+                      android:paddingBottom="10dp"
+                      android:padding="15dp"
+                      android:password="true"
+                      android:background="@drawable/et_bule_bg"
+                      android:hint="确认密码"/>
+
+            <Button android:layout_width="match_parent"
+                    android:text="@string/suresub"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:layout_below="@+id/pass_editext"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:id="@+id/button_sub"
+                    android:background="@drawable/button_selector_yellow"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:text="@string/msg_pwr"
+                      android:padding="8dp"
+                      android:textColor="@color/red_normal"
+                      android:textSize="12sp"
+                      android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </com.xiaogang.myapp.util.upload.ReboundScrollView>
+
+</LinearLayout>

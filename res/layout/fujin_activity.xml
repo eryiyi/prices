@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back"
+                android:onClick="back"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/fujinshagnhu"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                    android:src="@drawable/find"
+                   android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+    <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/lstv"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/divider_color"
+            android:dividerHeight="0.5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+    </ListView>
+</LinearLayout>

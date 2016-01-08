@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/left_button"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/jiage"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                    android:src="@drawable/find"
+                   android:onClick="search"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/type"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/left_button"
+                   android:id="@+id/type"
+                   android:layout_marginRight="10dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+    <com.xiaogang.myapp.util.upload.ReboundScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_height="match_parent">
+            <include layout="@layout/money_activity_header"/>
+            <com.xiaogang.myapp.widget.PictureGridview
+                    android:id="@+id/lv_grideview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:numColumns="1"
+                    android:stretchMode="columnWidth"/>
+        </LinearLayout>
+    </com.xiaogang.myapp.util.upload.ReboundScrollView>
+
+</LinearLayout>

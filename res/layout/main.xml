@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+    <com.xiaogang.myapp.ui.SlideMenu
+            android:id="@+id/slide_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+        <include layout="@layout/leftmenu"/>
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/color_2"
+                android:orientation="vertical" >
+            <include layout="@layout/money_activity"/>
+        </RelativeLayout>
+
+    </com.xiaogang.myapp.ui.SlideMenu>
+
+</RelativeLayout>
+

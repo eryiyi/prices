@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/background_view_rounded_single">
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:id="@+id/circle_img"
+                  android:gravity="center_vertical"
+                  android:layout_height="wrap_content">
+
+        <!--<com.xiaogang.myapp.widget.CircleImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:src="@drawable/head"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_height="30dp"/>-->
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="NO.1"
+                  android:layout_margin="8dp"
+                  android:textSize="18sp"
+                  android:textColor="@color/yellow"
+                  android:id="@+id/news_num"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView android:layout_width="match_parent"
+               android:id="@+id/item_pic"
+               android:layout_below="@+id/circle_img"
+               android:src="@drawable/deng_01"
+               android:scaleType="centerCrop"
+               android:layout_height="120dp"/>
+
+    <TextView android:layout_width="match_parent"
+              android:text="@string/txt002"
+              android:textColor="@color/text_color_heise_504f4f"
+              android:textSize="16sp"
+              android:layout_marginTop="3dp"
+              android:textStyle="bold"
+              android:ellipsize="end"
+              android:layout_below="@+id/item_pic"
+              android:id="@+id/item_title"
+              android:gravity="center_horizontal|left"
+              android:padding="8dp"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="match_parent"
+              android:text="@string/txt002"
+              android:textColor="@color/text_color_heise_504f4f"
+              android:textSize="12sp"
+              android:layout_marginTop="3dp"
+              android:visibility="gone"
+              android:ellipsize="end"
+              android:layout_below="@+id/item_title"
+              android:id="@+id/item_cont"
+              android:gravity="center_horizontal|left"
+              android:padding="8dp"
+              android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:padding="8dp"
+                  android:visibility="gone"
+                  android:layout_below="@+id/item_cont"
+                  android:layout_height="wrap_content">
+            <TextView android:layout_width="0dp"
+                      android:textSize="14sp"
+                      android:padding="5dp"
+                      android:id="@+id/bottom_one"
+                      android:layout_weight="1"
+                      android:text="14小时前"
+                      android:drawableLeft="@drawable/botton_one"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="0dp"
+                      android:textSize="14sp"
+                      android:padding="5dp"
+                      android:layout_weight="1"
+                      android:id="@+id/bottom_two"
+                      android:text="1200人关注"
+                      android:drawableLeft="@drawable/bottom_two"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="0dp"
+                      android:textSize="14sp"
+                      android:padding="5dp"
+                      android:layout_weight="1"
+                      android:id="@+id/bottom_three"
+                      android:text="@string/taolun"
+                      android:drawableLeft="@drawable/bottom_three"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</RelativeLayout>
+
+

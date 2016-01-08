@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:text="@string/zhuce"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <!-- head结束 -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+            <TextView android:layout_width="0dp"
+                      android:text="@string/shoujizhuce"
+                      android:padding="8dp"
+                      android:id="@+id/mobile_button"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:textSize="18sp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:text="@string/youxiangzhuce"
+                      android:id="@+id/email_button"
+                      android:padding="8dp"
+                      android:gravity="center"
+                      android:textSize="18sp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+        <ImageView android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:id="@+id/mobile_line"
+                   android:background="@color/yellow"
+                   android:layout_height="3dp"/>
+        <ImageView android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:id="@+id/email_line"
+                   android:background="@color/gray"
+                   android:layout_height="3dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+                  android:id="@+id/reg_mobile"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15.0dip"
+                  android:layout_marginTop="10.0dip"
+                  android:layout_marginRight="15.0dip"
+                  >
+
+        <LinearLayout android:orientation="horizontal"
+                      android:clickable="false"
+                      android:layout_width="match_parent"
+                      android:layout_height="60dp"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                      android:gravity="center"
+                      style="@style/list_item_single">
+            <ImageView android:layout_width="20dp"
+                       android:layout_marginLeft="10dp"
+                       android:src="@drawable/reg_mobile_one"
+                       android:layout_height="20dp"/>
+            <EditText android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:textSize="14dp"
+                      android:background="@null"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical"
+                      android:layout_marginLeft="15dp"
+                      android:id="@+id/mobile"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:hint="@string/weishoujihaoma"
+                      android:layout_height="match_parent"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/yanzhengma"
+                    android:padding="5dp"
+                    android:textSize="12sp"
+                    android:id="@+id/code_button"
+                    android:background="@drawable/button_selector_yellow"
+                    android:layout_height="wrap_content">
+
+            </Button>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+                      android:clickable="false"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                      android:layout_width="match_parent"
+                      android:layout_height="60dp"
+                      style="@style/list_item_middle">
+            <ImageView android:layout_width="20dp"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginLeft="10dp"
+                       android:src="@drawable/reg_mobile_two"
+                       android:layout_height="20dp"/>
+            <EditText android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:layout_marginTop="5dp"
+                      android:textSize="14dp"
+                      android:layout_marginLeft="15dp"
+                      android:id="@+id/card"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical"
+                      android:background="@null"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:hint="@string/shoujiyanzhengma"
+                      android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+                      android:clickable="false"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                      android:layout_width="match_parent"
+                      android:layout_height="60dp"
+                      style="@style/list_item_bottom">
+            <ImageView android:layout_width="20dp"
+                       android:layout_marginLeft="10dp"
+                       android:src="@drawable/reg_mobile_two"
+                       android:layout_height="20dp"/>
+            <EditText android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:textSize="14dp"
+                      android:password="true"
+                      android:layout_marginTop="2dp"
+                      android:layout_marginLeft="15dp"
+                      android:id="@+id/pass"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical"
+                      android:background="@null"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:hint="@string/weimima"
+                      android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--邮箱注册-->
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/reg_emial"
+                  android:visibility="gone"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15.0dip"
+                  android:layout_marginTop="10.0dip"
+                  android:layout_marginRight="15.0dip"
+            >
+
+        <LinearLayout android:orientation="horizontal"
+                      android:clickable="false"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                      android:layout_width="match_parent"
+                      android:layout_height="60dp"
+                      android:gravity="center"
+                      style="@style/list_item_single">
+            <ImageView android:layout_width="20dp"
+                       android:layout_marginLeft="10dp"
+                       android:src="@drawable/reg_email"
+                       android:layout_height="20dp"/>
+            <EditText android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:textSize="14dp"
+                      android:background="@null"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical"
+                      android:layout_marginLeft="15dp"
+                      android:id="@+id/email"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:hint="请输入真实邮箱"
+                      android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+                      android:clickable="false"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                      android:layout_width="match_parent"
+                      android:layout_height="60dp"
+                      style="@style/list_item_middle">
+            <ImageView android:layout_width="20dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="5dp"
+                       android:src="@drawable/reg_pwr"
+                       android:layout_height="20dp"/>
+            <EditText android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:textSize="14dp"
+                      android:layout_marginTop="5dp"
+                      android:layout_marginLeft="15dp"
+                      android:id="@+id/pwr"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical"
+                      android:background="@null"
+                      android:password="true"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:hint="6-32位密码"
+                      android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+                      android:clickable="false"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                      android:layout_width="match_parent"
+                      android:layout_height="60dp"
+                      style="@style/list_item_bottom">
+            <ImageView android:layout_width="20dp"
+                       android:layout_marginLeft="10dp"
+                       android:src="@drawable/reg_card"
+                       android:layout_height="20dp"/>
+            <EditText android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:textSize="14dp"
+                      android:layout_marginTop="2dp"
+                      android:layout_marginLeft="15dp"
+                      android:id="@+id/password"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical"
+                      android:background="@null"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:hint="请输入右侧的验证码"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="wrap_content"
+                      android:padding="3dp"
+                      android:id="@+id/code"
+                      android:text="123"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button android:layout_width="match_parent"
+            android:text="@string/zhuce"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:layout_below="@+id/login_edixt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:id="@+id/button_login"
+            android:background="@drawable/button_selector_yellow"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

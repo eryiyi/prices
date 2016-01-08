@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:background="@color/white">
+
+    <ImageView android:layout_width="match_parent"
+               android:id="@+id/item_pic"
+               android:src="@drawable/deng_01"
+               android:scaleType="centerCrop"
+               android:layout_height="120dp"/>
+    <TextView android:layout_width="match_parent"
+              android:text="@string/txt001"
+              android:textColor="@color/text_color_heise_504f4f"
+              android:textSize="14sp"
+              android:layout_marginTop="3dp"
+              android:ellipsize="end"
+              android:layout_below="@+id/item_pic"
+              android:id="@+id/item_title"
+              android:gravity="center_horizontal|left"
+              android:padding="3dp"
+              android:layout_height="45dp"/>
+    <TextView android:layout_width="match_parent"
+              android:text="RMB:$850"
+              android:layout_marginTop="5dp"
+              android:id="@+id/item_rmb"
+              android:layout_below="@+id/item_title"
+              android:textColor="@color/red_rmb"
+              android:textSize="14sp"
+              android:gravity="center_horizontal"
+              android:layout_height="25dp"/>
+</RelativeLayout>
+
+

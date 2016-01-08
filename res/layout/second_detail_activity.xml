@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/leftsecondhand"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/ershoumaimai"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/find"
+                   android:onClick="findSearch"
+                   android:padding="12sp"
+                   android:layout_toLeftOf="@+id/type"
+                   android:layout_centerVertical="true"
+                   android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/left_button"
+                   android:id="@+id/type"
+                   android:padding="8dp"
+                   android:layout_marginRight="10dp"
+                   android:onClick="onTopMenuPopupButtonClick"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:background="@color/yellow"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="wrap_content"
+                          android:orientation="horizontal"
+                          android:gravity="center"
+                          android:padding="5dp"
+
+                          android:layout_height="wrap_content">
+                    <Button android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/button_goods"
+                            android:textColor="@color/black"
+                            android:text="@string/shangpinxiangqing"
+                            android:textSize="18sp"
+                            android:background="@drawable/button_selector_gray"
+                            android:layout_height="wrap_content"/>
+                    <Button android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/button_user"
+                            android:textColor="@color/white"
+                            android:text="@string/shangjiaxiangqing"
+                            android:background="@drawable/button_selector_gray"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+    <com.xiaogang.myapp.util.upload.ReboundScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:visibility="gone"
+                      android:id="@+id/one"
+                      android:layout_height="wrap_content">
+            <ImageView android:layout_width="match_parent"
+                       android:src="@drawable/deng_01"
+                       android:id="@+id/second_detail_cover"
+                       android:layout_height="wrap_content"/>
+            <RelativeLayout android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:background="@color/gray_hou"
+                            android:layout_height="wrap_content">
+
+                <TextView android:layout_width="match_parent"
+                          android:padding="8dp"
+                          android:id="@+id/title"
+                          android:text="Acer Aspire One AOD270"
+                          android:textColor="@color/text_color_heise_504f4f"
+                          android:textSize="16sp"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text="RMB :￥1500"
+                          android:layout_below="@+id/title"
+                          android:padding="8dp"
+                          android:id="@+id/money"
+                          android:textColor="@color/red_press"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text="@string/lianximaijia"
+                          android:gravity="center"
+                          android:layout_alignParentRight="true"
+                          android:textColor="@color/white"
+                          android:drawableLeft="@drawable/tel"
+                          android:layout_marginRight="8dp"
+                          android:layout_below="@+id/title"
+                          android:padding="3dp"
+                          android:id="@+id/tel_click"
+                          android:background="@color/yellow"
+                          android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:padding="15dp"
+                          android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/yishoucankaojia"
+                              android:textSize="16sp"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="RMB :￥2500"
+                              android:textSize="18sp"
+                              android:id="@+id/one_prices"
+                              android:layout_marginRight="5dp"
+                              android:drawableRight="@drawable/in_right"
+                              android:textColor="@color/red_press"
+                              android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                  android:background="@color/gray"
+                  android:layout_height="1.0dp"></View>
+            <RelativeLayout android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:layout_height="wrap_content">
+                <TextView android:layout_width="match_parent"
+                          android:textSize="14sp"
+                          android:padding="3dp"
+                          android:id="@+id/cont"
+                          android:textColor="@color/text_color_heise_504f4f"
+                          android:text="刊登状态：刊登中\n行/水：行货\n状况：状况很好\n保养日期:没有保养\n卖家：lg945i\n刊登日期：2015-07-09 19:20:00\n最后更新：2015-07-09 19:30:00\n浏览次数：6\n"
+                          android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:id="@+id/two"
+                      android:padding="8dp"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent"
+                      android:padding="8dp"
+                      android:textSize="16sp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_gravity="center"
+                      android:gravity="center|left"
+                      android:id="@+id/user_name"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent"
+                      android:padding="8dp"
+                      android:textSize="16sp"
+                      android:lineSpacingMultiplier="1.2"
+                      android:id="@+id/user_cont"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+        </LinearLayout>
+    </com.xiaogang.myapp.util.upload.ReboundScrollView>
+
+</LinearLayout>

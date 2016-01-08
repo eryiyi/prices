@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/main"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!-- head开始 -->
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dip"
+                    android:text="@string/fatie"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:id="@+id/back"
+                android:paddingLeft="15dp"
+                android:src="@drawable/back"
+                android:paddingRight="10dp"/>
+
+        <TextView
+                android:id="@+id/publish_pic_run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#35a5e7"
+                android:layout_marginRight="10dp"
+                android:text="@string/fabu"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1">
+         <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                <EditText
+                        android:id="@+id/face_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="80dp"
+                        android:maxHeight="200dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@null"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:hint="@string/shuodianer"
+                        android:padding="10dp"
+                        android:textColor="#ff000000"/>
+                <ImageView android:layout_width="wrap_content"
+                           android:src="@drawable/add_pic"
+                           android:id="@+id/add_pic"
+                           android:layout_marginLeft="8dp"
+                           android:layout_below="@+id/face_content"
+                           android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <com.xiaogang.myapp.widget.NoScrollGridView
+                    android:id="@+id/publish_moopd_gridview_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@drawable/selector_pressed_gray"
+                    android:horizontalSpacing="5dip"
+                    android:numColumns="4"
+                    android:padding="10dip"
+                    android:verticalSpacing="5dip"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:background="#d1d1d1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

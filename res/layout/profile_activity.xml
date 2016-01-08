@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/main"
+              android:background="@color/gray"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent"
+                    android:background="@drawable/left_back"
+                    android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content"
+                         android:src="@drawable/back"
+                       android:padding="8dp"
+                       android:id="@+id/back"
+                         android:layout_height="wrap_content"/>
+
+            <com.xiaogang.myapp.widget.CircleImageView
+                    android:layout_width="45dp"
+                       android:src="@drawable/head"
+                       android:layout_marginTop="30dp"
+                       android:id="@+id/head"
+                       android:layout_centerHorizontal="true"
+                       android:layout_height="45dp"/>
+            <ImageView android:layout_width="wrap_content"
+                       android:src="@drawable/photo"
+                       android:layout_toRightOf="@+id/head"
+                       android:layout_below="@+id/head"
+                       android:onClick="selectpic"
+                       android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="@string/yonghuzhongxin"
+                      android:layout_centerHorizontal="true"
+                      android:id="@+id/user_title"
+                      android:layout_marginTop="25dp"
+                      android:layout_below="@+id/head"
+                      android:textSize="18sp"
+                      android:textColor="@color/yellow"
+                      android:layout_height="wrap_content"/>
+            <ImageView android:layout_width="wrap_content"
+                       android:src="@drawable/write"
+                       android:layout_marginLeft="8dp"
+                       android:layout_marginTop="20dp"
+                       android:id="@+id/edit_button"
+                       android:layout_below="@+id/head"
+                       android:layout_toRightOf="@+id/user_title"
+                       android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        <com.xiaogang.myapp.util.upload.ReboundScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="vertical"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:padding="15dp"
+                              android:focusable="true"
+                              android:focusableInTouchMode="true"
+                              android:background="@color/white"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/dianziyouxiang"
+                              android:textSize="18sp"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:layout_height="wrap_content"/>
+                    <EditText android:layout_width="wrap_content"
+                              android:textSize="16sp"
+                              android:background="@null"
+                              android:layout_weight="1"
+                              android:gravity="right"
+                              android:id="@+id/profile_email"
+                              android:hint="@string/weisheding"
+                              android:layout_height="wrap_content"/>
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/arrow_right"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_height="1dp">
+                </View>
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:background="@color/white"
+                              android:padding="15dp"
+                              android:focusable="true"
+                              android:focusableInTouchMode="true"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/shouji"
+                              android:textSize="18sp"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:layout_height="wrap_content"/>
+                    <EditText android:layout_width="wrap_content"
+                              android:textSize="16sp"
+                              android:layout_weight="1"
+                              android:background="@null"
+                              android:gravity="right"
+                              android:id="@+id/profile_mobile"
+                              android:hint="@string/qingshurushoujihao"
+                              android:layout_height="wrap_content"/>
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/arrow_right"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_height="1dp">
+                </View>
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:padding="15dp"
+                              android:focusable="true"
+                              android:focusableInTouchMode="true"
+                              android:background="@color/white"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/xingming"
+                              android:textSize="18sp"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:layout_height="wrap_content"/>
+                    <EditText android:layout_width="wrap_content"
+                              android:textSize="16sp"
+                              android:layout_weight="1"
+                              android:background="@null"
+                              android:gravity="right"
+                              android:id="@+id/profile_name"
+                              android:hint="@string/weisheding"
+                              android:layout_height="wrap_content"/>
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/arrow_right"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_height="1dp">
+                </View>
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:padding="15dp"
+                              android:focusable="true"
+                              android:focusableInTouchMode="true"
+                              android:background="@color/white"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/xingbie"
+                              android:textSize="18sp"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:textSize="16sp"
+                              android:id="@+id/profile_sex"
+                              android:layout_weight="1"
+                              android:background="@null"
+                              android:gravity="right"
+                              android:hint="@string/weisheding"
+                              android:layout_height="wrap_content"/>
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/arrow_right"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_height="1dp">
+                </View>
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:padding="15dp"
+                              android:visibility="gone"
+                              android:background="@color/white"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/jieshoudianzi"
+                              android:layout_weight="1"
+                              android:textSize="18sp"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:layout_height="wrap_content"/>
+
+                    <ImageView android:layout_width="wrap_content"
+                               android:id="@+id/switch_button"
+                               android:src="@drawable/switch_on"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:padding="15dp"
+                              android:onClick="resetPwr"
+                              android:layout_marginTop="10dp"
+                              android:background="@color/white"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/genggaimima"
+                              android:textSize="18sp"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:layout_height="wrap_content"/>
+
+                    <ImageView android:layout_width="wrap_content"
+                               android:layout_gravity="center"
+                               android:src="@drawable/arrow_right"
+                               android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <Button android:layout_width="match_parent"
+                        android:text="@string/tuichu"
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp"
+                        android:layout_below="@+id/login_edixt"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:id="@+id/exit"
+                        android:background="@drawable/button_selector_exit"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.xiaogang.myapp.util.upload.ReboundScrollView>
+
+</LinearLayout>

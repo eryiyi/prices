@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/main"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:onClick="back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/near_location"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/fujin"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/find"
+                   android:id="@+id/type"
+                   android:layout_marginRight="10dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="@color/yellow"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+                  android:text="@string/fujin3"
+                  android:textColor="@color/white"
+                  android:textSize="18sp"
+                  android:id="@+id/near_one"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:textSize="14sp"
+                  android:textColor="@color/white"
+                  android:layout_below="@+id/near_one"
+                  android:id="@+id/near_two"
+                  android:layout_marginTop="5dp"
+                  android:text="@string/txt006"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/near_switch"
+                   android:id="@+id/switch_button"
+                   android:layout_alignParentRight="true"
+                   android:layout_height="wrap_content"/>
+        <AutoCompleteTextView
+                android:id="@+id/searchkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.88"
+                android:visibility="gone"
+                android:text="餐厅" />
+    </RelativeLayout>
+
+        <!--<Button-->
+            <!--android:id="@+id/clear"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_marginBottom="2dip"-->
+            <!--android:layout_marginLeft="2dip"-->
+            <!--android:layout_marginRight="2dip"-->
+            <!--android:layout_marginTop="2dip"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="clearOverlay"-->
+            <!--android:padding="10dip"-->
+            <!--android:text="清除(clear)" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/resert"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_marginBottom="2dip"-->
+            <!--android:layout_marginLeft="2dip"-->
+            <!--android:layout_marginRight="2dip"-->
+            <!--android:layout_marginTop="2dip"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="resetOverlay"-->
+            <!--android:text="重置(reset)" />-->
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/pop_layout"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                >
+            <TextView android:layout_width="wrap_content"
+                      android:text="@string/shanghufanwei"
+                      android:id="@+id/text_one"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginTop="10dp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_alignParentLeft="true"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_below="@+id/text_one"
+                      android:text="1.0km"
+                      android:id="@+id/text_two"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginTop="5dp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_below="@+id/text_one"
+                      android:text="6.0km"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="5dp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_alignParentRight="true"
+                      android:layout_height="wrap_content"/>
+            <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/text_two"
+                    android:maxHeight="45px"
+                    android:minHeight="45px"
+                    android:progress="50"
+                    android:max="100"
+                    android:progressDrawable="@drawable/seekbar_define_style"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:id="@+id/seekBar"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:text="@string/renzhengyonghu"
+                      android:id="@+id/text_three"
+                      android:visibility="gone"
+                      android:layout_below="@+id/seekBar"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginTop="10dp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_alignParentLeft="true"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="@string/suoyouyonghu"
+                      android:visibility="gone"
+                      android:id="@+id/text_four"
+                      android:layout_below="@+id/seekBar"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="10dp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_alignParentRight="true"
+                      android:layout_height="wrap_content"/>
+            <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/text_three"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:maxHeight="45px"
+                    android:visibility="gone"
+                    android:minHeight="45px"
+                    android:progress="50"
+                    android:max="100"
+                    android:progressDrawable="@drawable/seekbar_define_style"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/seekBar_two"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

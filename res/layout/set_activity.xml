@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/set_left"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/shezhi"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                    android:src="@drawable/find"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                   android:id="@+id/type"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+
+    <com.xiaogang.myapp.util.upload.ReboundScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:gravity="center_vertical"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_one"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_one"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/jieshoutuisong"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/switch_on"
+                               android:id="@+id/switch_tuisong"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_one"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_below="@+id/set_liner_one"
+                              android:gravity="center_vertical"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_two"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_two"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/shiyongbaidu"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/switch_on"
+                               android:id="@+id/switch_baidu"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_two"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:visibility="gone"
+                              android:layout_below="@+id/set_liner_two"
+                              android:gravity="center_vertical"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_three"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_three"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/cunchuni"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/switch_off"
+                               android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_three"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:visibility="gone"
+                              android:layout_below="@+id/set_liner_three"
+                              android:gravity="center_vertical|center_horizontal"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_four"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_four"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/yuyan"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/jiantizhongwen"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:drawableRight="@drawable/in_set"
+                              android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_four"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_below="@+id/set_liner_four"
+                              android:gravity="center_vertical|center_horizontal"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_five"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_five"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/qingchu"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text=""
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:drawableRight="@drawable/in_set"
+                              android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_five"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_below="@+id/set_liner_five"
+                              android:gravity="center_vertical|center_horizontal"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_six"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_six"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/fuwutiaokuan"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text=""
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:drawableRight="@drawable/in_set"
+                              android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_six"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_below="@+id/set_liner_six"
+                              android:gravity="center_vertical|center_horizontal"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_seven"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_seven"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/yinsizhengce"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text=""
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:drawableRight="@drawable/in_set"
+                              android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_seven"
+                      android:layout_marginLeft="20dp"
+                      android:id="@+id/liner_yinsi"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_below="@+id/liner_yinsi"
+                              android:gravity="center_vertical|center_horizontal"
+                              android:padding="15dp"
+                              android:id="@+id/set_liner_eight"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/set_seven"
+                               android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="@string/jianchabanben"
+                              android:layout_weight="1"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:text="V4.0"
+                              android:id="@+id/version"
+                              android:textColor="@color/text_color_heise_504f4f"
+                              android:textSize="16sp"
+                              android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                      android:background="@color/gray"
+                      android:layout_below="@+id/set_liner_seven"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_height="1.0dp"/>
+            </RelativeLayout>
+    </com.xiaogang.myapp.util.upload.ReboundScrollView>
+
+</LinearLayout>

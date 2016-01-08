@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:id="@+id/main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back"
+                android:onClick="back"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/pinglun"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/find"
+                   android:layout_marginRight="10dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:visibility="gone"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+
+        <com.xiaogang.myapp.util.upload.ReboundScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="vertical"
+                          android:layout_height="match_parent">
+
+            <TextView android:layout_width="match_parent"
+                      android:text="safadsff"
+                      android:id="@+id/title"
+                      android:textColor="@color/black"
+                      android:background="@color/gray_two"
+                      android:padding="15dp"
+                      android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:padding="15dp"
+                          android:onClick="click_one"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:text="@string/shiyongshjian"
+                          android:textColor="@color/black"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text=""
+                          android:id="@+id/hours"
+                          android:layout_height="wrap_content"/>
+                <ImageView android:layout_width="wrap_content"
+                           android:src="@drawable/in_right"
+                           android:layout_gravity="center_vertical"
+                           android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <VideoView android:layout_width="match_parent"
+                       android:background="@color/gray_line_color"
+                       android:layout_height="1dp"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:padding="15dp"
+                          android:onClick="click_two"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:text="@string/shuxichengdu"
+                          android:layout_weight="1"
+                          android:textColor="@color/black"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text=""
+                          android:id="@+id/know"
+                          android:layout_height="wrap_content"/>
+                <ImageView android:layout_width="wrap_content"
+                           android:src="@drawable/in_right"
+                           android:layout_gravity="center_vertical"
+                           android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <VideoView android:layout_width="match_parent"
+                       android:background="@color/gray_line_color"
+                       android:layout_height="1dp"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:padding="15dp"
+                          android:onClick="click_three"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:text="@string/tuijianchengdu"
+                          android:textColor="@color/black"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text=""
+                          android:id="@+id/recommend"
+                          android:layout_height="wrap_content"/>
+                <ImageView android:layout_width="wrap_content"
+                           android:src="@drawable/in_right"
+                           android:layout_gravity="center_vertical"
+                           android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                       android:background="@color/gray_line_color"
+                       android:layout_height="1dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:textColor="@color/black"
+                    android:gravity="top"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/et_bule_bg"
+                    android:paddingLeft="10dip"
+                    android:drawablePadding="10dip"
+                    android:hint="@string/yijian"
+                    android:id="@+id/idea"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:gravity="top"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/et_bule_bg"
+                    android:paddingLeft="10dip"
+                    android:drawablePadding="10dip"
+                    android:hint="@string/youdian"
+                    android:id="@+id/youdian"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:gravity="top"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/et_bule_bg"
+                    android:paddingLeft="10dip"
+                    android:drawablePadding="10dip"
+                    android:hint="@string/quedian"
+                    android:id="@+id/quedian"/>
+            <!--<RatingBar-->
+                    <!--android:id="@+id/"-->
+                    <!--android:numStars="10"-->
+                    <!--style="@style/roomRatingBar"-->
+                    <!--android:isIndicator="false"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dip">-->
+            <!--</RatingBar>-->
+                <RatingBar android:layout_width="wrap_content"
+                           android:layout_below="@+id/money"
+                           android:isIndicator="false"
+                           android:numStars="5"
+                           android:rating="5"
+                           android:stepSize="1"
+                           android:id="@+id/rating_bar"
+                           android:max="255"
+                           style="?android:attr/ratingBarStyleIndicator"
+                           android:progress="255"
+                           android:layout_height="wrap_content"/>
+
+            <Button android:layout_width="match_parent"
+                    android:text="@string/tijiao"
+                    android:id="@+id/sure"
+                    android:onClick="submit"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/blue_qian"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.xiaogang.myapp.util.upload.ReboundScrollView>
+
+</LinearLayout>

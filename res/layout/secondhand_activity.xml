@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- head开始 -->
+    <RelativeLayout
+            android:id="@+id/lp_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+                android:id="@+id/leftbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/leftsecondhand"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="@string/ershoushichang"
+                  android:layout_toRightOf="@+id/leftbutton"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                    android:src="@drawable/find"
+                   android:onClick="findSearch"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!-- head结束 -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:visibility="gone"
+                  android:layout_height="wrap_content">
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textSize="14sp"
+                  android:padding="3dp"
+                  android:text="@string/shumachanpin"
+                  android:singleLine="true"
+                  android:background="@color/yellow"
+                  android:textColor="@color/white"
+                  android:drawableRight="@drawable/down_gray"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_marginLeft="2dp"
+                  android:layout_weight="1"
+                  android:textSize="14sp"
+                  android:padding="3dp"
+                  android:singleLine="true"
+                  android:text="@string/chongqingshi"
+                  android:background="@color/yellow"
+                  android:textColor="@color/white"
+                  android:drawableRight="@drawable/down_gray"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="0dp"
+                  android:textSize="14sp"
+                  android:layout_marginLeft="2dp"
+                  android:layout_weight="1"
+                  android:padding="3dp"
+                  android:singleLine="true"
+                  android:text="@string/yubeiqu"
+                  android:background="@color/yellow"
+                  android:textColor="@color/white"
+                  android:drawableRight="@drawable/down_gray"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textSize="14sp"
+                  android:layout_marginLeft="2dp"
+                  android:padding="3dp"
+                  android:singleLine="true"
+                  android:text="汽博中心"
+                  android:background="@color/yellow"
+                  android:textColor="@color/white"
+                  android:drawableRight="@drawable/down_gray"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textSize="14sp"
+                  android:padding="3dp"
+                  android:layout_marginLeft="2dp"
+                  android:singleLine="true"
+                  android:text="15小时前"
+                  android:background="@color/yellow"
+                  android:textColor="@color/white"
+                  android:drawableRight="@drawable/down_gray"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <com.xiaogang.myapp.library.PullToRefreshGridView
+            android:id="@+id/lstv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:horizontalSpacing="4dip"
+            android:listSelector="#00000000"
+            android:numColumns="2"
+            android:verticalSpacing="4dip"
+            android:padding="4dip"/>
+
+
+</LinearLayout>

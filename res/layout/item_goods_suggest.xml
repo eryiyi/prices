@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="8dp"
+              android:background="@drawable/zhuye_item_select"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent"
+              android:id="@+id/item_title"
+              android:text="名称奥利弗的健身房扣篮大赛"
+              android:padding="6dp"
+              android:layout_below="@+id/item_img"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="match_parent"
+              android:text="使用时间：1年"
+              android:id="@+id/item_hours"
+              android:padding="6dp"
+              android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+        <TextView android:layout_width="0dp"
+                  android:text="推荐程度"
+                  android:layout_weight="1"
+                  android:padding="6dp"
+                  android:id="@+id/item_recommend"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="0dp"
+                  android:text="熟悉程度"
+                  android:padding="6dp"
+                  android:layout_weight="1"
+                  android:id="@+id/item_know"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent"
+              android:text="意见：阿萨法司法第三方"
+              android:padding="6dp"
+              android:id="@+id/item_idea"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="match_parent"
+              android:text="优点：撒打发第三方大师傅"
+              android:padding="6dp"
+              android:id="@+id/item_merit"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="match_parent"
+              android:text="缺点：萨达发大水发大水"
+              android:id="@+id/item_defect"
+              android:padding="6dp"
+              android:layout_height="wrap_content"/>
+
+    <!--<TextView android:layout_width="match_parent"-->
+              <!--android:padding="6dp"-->
+              <!--android:id="@+id/item_approve_oppose"-->
+              <!--android:layout_height="wrap_content"/>-->
+
+    <TextView android:layout_width="match_parent"
+              android:text="sadfdfdasf"
+              android:padding="6dp"
+              android:layout_below="@+id/item_prices"
+              android:id="@+id/item_dateline"
+              android:layout_height="wrap_content"/>
+
+    <!--<TextView android:layout_width="wrap_content"-->
+              <!--android:text="@string/pingfen"-->
+              <!--android:layout_height="wrap_content"/>-->
+
+
+    <RatingBar android:layout_width="wrap_content"
+               android:isIndicator="true"
+               android:numStars="5"
+               android:rating="5"
+               android:stepSize="1"
+               android:id="@+id/item_grade"
+               android:max="255"
+               style="?android:attr/ratingBarStyleIndicator"
+               android:progress="255"
+               android:layout_height="wrap_content"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:padding="3dp"
+                  android:layout_height="wrap_content">
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:text="@string/zhichi"
+                  android:layout_marginRight="8dp"
+                  android:padding="8dp"
+                  android:gravity="center"
+                  android:id="@+id/zhichi"
+                  android:layout_marginBottom="10dp"
+                  android:background="@drawable/button_selector_shape"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="@string/fandui"
+                  android:layout_marginRight="8dp"
+                  android:padding="8dp"
+                  android:id="@+id/fandui"
+                  android:layout_marginBottom="10dp"
+                  android:background="@drawable/button_selector_shape"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

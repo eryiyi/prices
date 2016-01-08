@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+        <ImageView android:layout_width="match_parent"
+                   android:scaleType="centerCrop"
+                   android:id="@+id/detail_cover"
+                   android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/new_pic"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="10dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+          android:background="@color/gray"
+          android:layout_height="1.0dp"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"
+                      android:text="AMYTEL AW-7080TAMYTEL AW-7080T"
+                      android:padding="8dp"
+                      android:id="@+id/title"
+                      android:textSize="14sp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="60dp"
+                      android:text="@string/shoucang"
+                      android:gravity="center_horizontal"
+                      android:layout_marginRight="8dp"
+                      android:padding="8dp"
+                      android:id="@+id/favour_button"
+                      android:layout_alignParentRight="true"
+                      android:textSize="14sp"
+                      android:drawableTop="@drawable/shoucang"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="@string/guolvqi"
+                      android:textSize="14sp"
+                      android:layout_below="@+id/title"
+                      android:padding="5dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginTop="8dp"
+                      android:textColor="@color/text_color_heise_504f4f"
+                      android:background="@color/blue_one"
+                      android:id="@+id/type"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="RMB:3489"
+                      android:textSize="20sp"
+                      android:padding="8dp"
+                      android:layout_below="@+id/type"
+                      android:textColor="@color/red_normal"
+                      android:drawableRight="@drawable/hanghuo"
+                      android:id="@+id/money"
+                      android:layout_height="wrap_content"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_below="@+id/money"
+                  android:textColor="@color/textcolor"
+                  android:lineSpacingExtra="5dp"
+                  android:textSize="14sp"
+                  android:id="@+id/cont"
+                  android:text="频道数目：20\n操作频段：409 - 410MHz\n输出功率：500w"
+                  android:padding="8dp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="match_parent"
+                  android:text="sfdsafasd"
+                  android:lineSpacingExtra="5dp"
+                  android:textColor="@color/textcolor"
+                  android:textSize="14sp"
+                  android:padding="8dp"
+                  android:id="@+id/content"
+                  android:layout_below="@+id/cont"
+                  android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+          android:background="@color/gray"
+          android:layout_height="1.0dp"/>
+
+    <!--GridView横向滚动-->
+    <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:scrollbars="none"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp" >
+
+            <GridView
+                    android:id="@+id/grid"
+                    android:scrollbars="none"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:numColumns="auto_fit"
+                    android:stretchMode="spacingWidthUniform" >
+            </GridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
